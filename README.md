@@ -164,4 +164,20 @@ To answer this we plotted the monthly reported cases of domestic violence from 2
 
 **Fig 4.** The number of reported domestic violence cases in the City of York, UK. A yearly average line is fitted in red.
 
+**Code used to produce figure 4 in python:**
+```
+```
 
+**A1. The total number of reported domestic violence cases fluctuates overtime. The number of reports decreases between 2010 and 2011 and remains steady 2016. Between 2016 and 2018 reported  cases of domestic violence increase.**
+
+**Q2. Are there any temporal trends in the reporting of standard, medium and high (aka MARAC) cases?**
+
+To investigate this question we examined the data in two ways. Firstly, we plotted the number of reported cases for each month that was available in each of our three categories (standard, medium and high) to determine whether the reporting patterns were similar or dissimilar. Secondly, we grouped the available data for each category by month to examine any seasonality in reporting patterns.
+
+![Figure 5](./Figures/domestic_violence_case.png)
+
+**Fig 5.** Data on reported domestic violence cases in the City of York, UK. Top panel shows the monthly reported incidences from 2011-2016 for three risk categories; standard, medium and high. Bottom panel shows the summed values for each risk category by month. 
+
+**Code used to produce figure 5 in python:**
+```
+```
