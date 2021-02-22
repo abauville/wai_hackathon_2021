@@ -181,3 +181,7 @@ To investigate this question we examined the data in two ways. Firstly, we plott
 **Code used to produce figure 5 in python:**
 ```
 ```
+
+**A2. Between 2011 and 2016 the number of standard and medium risk domestic violence cases have increased but high risk cases have remained relatively stable. There is no pattern in the number of reported cases by month.**
+
+## Future analyses
