@@ -185,3 +185,11 @@ To investigate this question we examined the data in two ways. Firstly, we plott
 **A2. Between 2011 and 2016 the number of standard and medium risk domestic violence cases have increased but high risk cases have remained relatively stable. There is no pattern in the number of reported cases by month.**
 
 ## Future analyses
+
+As we were limited on time we did not get to explore all the datasets. If we had more time some of the questions we would have tried to answer were:
+
+**Q3. Does the number of reported cases of domestic violence reflected a wider trend in reported cases of crime in general?**
+
+**Q4. What are the trends for the types of domestic violence crimes committed? (e.g. ‘violent’ v ‘other’.)**
+
+**Q5. Does the number of reported cases of domestic violence increase when there is an increase in homelessness?** 
