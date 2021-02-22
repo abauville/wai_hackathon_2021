@@ -155,5 +155,13 @@ The majority of the datasets were recorded in a similar way, and for a similar t
 
 ## Exploratory data analysis
 Using these datasets we wanted to examine trends in domestic violence in the City of York. 
+
 **Q1. What is the overall trend in reported domestic violence cases?**
+
+To answer this we plotted the monthly reported cases of domestic violence from 2010 – 2018 and fitted a yearly average.
+
+![Figure 4](./Figures/reported_case.png)
+
+**Fig 4.** The number of reported domestic violence cases in the City of York, UK. A yearly average line is fitted in red.
+
 
