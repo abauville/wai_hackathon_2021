@@ -1,6 +1,6 @@
-<p style="color:darkred; font-family:Futura; font-size:45px"> Report on WAI hackathon 2021</p>
+# Report on WAI hackathon 2021
 
-###Team members (by alphabetical order, women first):
+### Team members (by alphabetical order, women first):
 
 - Prima Anugerahanti (Indonesia)
 - Heather Ritchie (Scotland)
@@ -9,7 +9,7 @@
 - Arthur Bauville (France)
 
 
-###Content:
+### Content:
 1. #### [Introduction](#Intro)
 1. #### [Dataset 1](#Data_1)
     1. #### [Description of the dataset](#Data_1.1)
@@ -23,7 +23,7 @@
 
 
 <a id="Intro"></a>
-<p style="color:darkred; font-family:Futura; font-size:40px">1. Introduction</p>
+# 1. Introduction
 
 For this competition, our team met on February 20, 2021. All team members are researchers at the Japan Institute for Marine-Earth Sciences and Technology (JAMSTEC). Since we could only spend one day together for the competition our objectives were: 
 
@@ -35,10 +35,10 @@ We tried to exploit two datasets: the Viz5/MakeOverMonday questionnaire on domes
 Since we alotted ourselves only one day of work, we focused on exploratory data analysis. We also attempted statistical modeling but faced a number of interesting road blocks for which we managed to design workarounds but we didn't have time to implement it.
 
 <a id="Data_1"></a>
-<p style="color:darkred; font-family:Futura; font-size:40px">2. Dataset 1</p>
+# 2. Dataset 1
 
 <a id="Data_1.1"></a>
-<p style="color:black; font-family:Futura; font-size:30px">2.1. Description of the dataset</p>
+## 2.1. Description of the dataset
 
 Dataset 1 summarizes the results of a questionnaire where participants were asked whether they agree or disagree to the following statements:
 
@@ -53,7 +53,7 @@ The dataset includes the percentage of positive answers depending on categories 
 – marital status, education level, employment status, residence type, or age
 
 <a id="Data_1.2"></a>
-<p style="color:black; font-family:Futura; font-size:30px">2.2. Exploratory data analysis</p>
+## 2.2. Exploratory data analysis
 
 Here, we tried to answer a few questions.
 **Q1: To which statement did people agree and disagreed the most for which it is justified to hit or beat the wife?**
@@ -138,15 +138,15 @@ geom_smooth(method=lm)
 
 
 <a id="Data_1.3"></a>
-<p style="color:black; font-family:Futura; font-size:30px">2.3. Modeling attempt</p>
+## 2.3. Modeling attempt</p>
 
 A challenge for building a predictive model using this dataset is that the dataset does not include the answer and demographic features of each individual person who took the questionnaire (i.e., raw data). Instead, the data provided was agglomerated as percentage of "yes" for e.g. male or female; or the percentage of "yes" for people with "no", "primary", "secondary", or "higher" education level. We tried to use compound statistics to profile people who are most likely to answer "yes" to the given statement. In other terms we wanted to build a new dataset where one could ask: "if we pick at random a person that answered "yes", what is the probability that he is a highly educated man between 25-34 years old". To do this we tried to apply compound probability to combine the different statistics. The problem we faced is that the data we need was "how many percent of people answered yes", combined with "among the persons who answered yes, what is the percentage of people with low/medium/high education". However, to transform the available data to the data we wanted we would have needed at least the number of people from which the percentage was calculated (i.e., number of samples) for each "Demographics Question". In the absence of this data one could either get the raw data or attempt to approximately reconstruct this information from other datasets e.g., of demographics, education etc... Unfortunately we didn't have time to finish this analysis.
 
 <a id="Data_2"></a>
-<p style="color:darkred; font-family:Futura; font-size:40px">3. Dataset 2</p>
+# 3. Dataset 2
 
 <a id="Data_2.1"></a>
-<p style="color:black; font-family:Futura; font-size:30px">3.1. Description of the dataset(s)</p>
+## 3.1. Description of the dataset(s)
 
 Dataset 2 (**kpi-domv9a-medium.csv**) documents the number of medium risk domestic violence incidences recorded from 2011-2015 in the City of York, United Kingdom. The number of incidences is recorded on a monthly basis but also summarised by financial quarterlies and by financial year. 
 
@@ -172,7 +172,7 @@ The majority of the datasets were recorded in a similar way, and for a similar t
 
 
 <a id="Data_2.2"></a>
-<p style="color:black; font-family:Futura; font-size:30px">3.2. Exploratory data analysis</p>
+## 3.2. Exploratory data analysis
 Using these datasets we wanted to examine trends in domestic violence in the City of York. 
 
 **Q1. What is the overall trend in reported domestic violence cases?**
@@ -227,7 +227,7 @@ plt.legend(loc= 'best')
 
 
 <a id="Data_2.3"></a>
-<p style="color:black; font-family:Futura; font-size:30px">3.3. Future analyses</p>
+## 3.3. Future analyses
 
 As we were limited on time we did not get to explore all the datasets. If we had more time some of the questions we would have tried to answer were:
 
@@ -240,6 +240,6 @@ As we were limited on time we did not get to explore all the datasets. If we had
 **Q6. Does the increase in "standard" and "medium risk" reports reflect an increase of domestic violence cases, or an rather an increase in the action of reporting ? If the latter is true, then actually violence may actually be constant while women feel more open to report to the police.** 
 
 <a id="Summary"></a>
-<p style="color:darkred; font-family:Futura; font-size:40px">4. Summary</p>
+# 4. Summary
 
 Domestic violence is still a major problem in the world. This event opened our eyes on the discrepancy in the geopgrahical repartition of domestic violence (dataset 1). A suprising fact was that women see violence against them justified more often than men do. Secondly, reports of domestic violence in the city of York were multiplied by five between 2011 and 2018 for "standard" and "medium risk". Further analyses of the York dataset may reveal whether the increase in reports correspond to an increase in domestic violence or, hopefully, an increase in the openness and trust in the police system.
