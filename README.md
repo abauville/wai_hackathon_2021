@@ -3,7 +3,7 @@
 Team members (by alphabetical order, women first):
 
 - Prima Anugerahanti (Indonesia)
-- Heather Ritchie-Parker (Scotland)
+- Heather Ritchie (Scotland)
 - Gerlien Verhaegen (Belgium)
 - Ettore Barbieri (Italy)
 - Arthur Bauville (France)
