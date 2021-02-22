@@ -166,6 +166,11 @@ To answer this we plotted the monthly reported cases of domestic violence from 2
 
 **Code used to produce figure 4 in python:**
 ```
+plt.figure()
+plt.title('Number of Reported Domestic Violence case')
+plt.plot(dates_yr, york_reports.Value)
+plt.plot(sm, yealy_ave,'r*', linestyle='-', label='yearly average')
+plt.legend(loc='best')
 ```
 
 **A1. The total number of reported domestic violence cases fluctuates overtime. The number of reports decreases between 2010 and 2011 and remains steady 2016. Between 2016 and 2018 reported  cases of domestic violence increase.**
@@ -180,6 +185,23 @@ To investigate this question we examined the data in two ways. Firstly, we plott
 
 **Code used to produce figure 5 in python:**
 ```
+plt.figure()
+ax=plt.subplot(211)
+plt.title('Domestic violence case')
+ax.plot(dates_ys, reported_case_ys, label='Standard')
+ax.plot(dates_yd, reported_case, label='Medium')
+ax.plot(dates_hs, york_hfilt.Value, label= 'High')
+ax.legend(loc='best')
+ax.xaxis.set_major_locator(years)
+ax.xaxis.set_major_formatter(years_fmt)
+ax.xaxis.set_minor_locator(months)
+
+plt.subplot(212)
+width=0.5
+p1= plt.bar(york_s_rawfilt.Period, reported_case_ys, label= 'Standard')
+p2= plt.bar(york_data.Period,reported_case, width, label= 'Medium' )
+p3= plt.bar(york_hfilt.Period, york_hfilt.Value, 0.3, label= 'High')
+plt.legend(loc= 'best')
 ```
 
 **A2. Between 2011 and 2016 the number of standard and medium risk domestic violence cases have increased but high risk cases have remained relatively stable. There is no pattern in the number of reported cases by month.**
