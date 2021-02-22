@@ -127,4 +127,33 @@ A challenge for building a predictive model using this dataset is that the datas
 
 # Summary
 
+# Dataset 2
+
+## Description of the dataset(s)
+
+Dataset 2 (**kpi-domv9a-medium.csv**) documents the number of medium risk domestic violence incidences recorded from 2011-2015 in the City of York, United Kingdom. The number of incidences is recorded on a monthly basis but also summarised by financial quarterlies and by financial year. 
+
+As the provided dataset only documented information on ‘medium risk’ incidences we decided to supplement this dataset with other publicly available datasets from data.gov.uk. We targeted all data sets on domestic violence within the City of York. _All datasets were accessed 20-FEB-2021_.
+
+Datasets investigated were as follows:
+1.	Domestic Violence Incidents Level - Medium Risk (**kpi-domv9a-medium.csv**)
+2.	Domestic Violence Incidents Level - Standard Risk (**kpi-domv8a-standard.csv**)
+3.	Number of MARAC cases discussed (**kpi-marac01-high-risk.csv**)
+4.	Number of domestic violence incidents involving arrest (**kpi-domv2-arrest.csv**)
+5.	Domestic Violence Number of Repeat Incidents (**kpi-csp18a-repeat.csv**)
+6.	Domestic Violence Occurrence Type - PSW Domestic Incident (**kpi-domv6-psw.csv**)
+7.	Number of domestic violence incidents where children present (**kpi-domv4-children-present.csv**)
+8.	Domestic Violence Occurrence Type - Crime Violence (**kpi-domv5-crime-violence.csv**)
+9.	Domestic Violence Occurrence Type - Other (**kpi-domv7-other.csv**)
+10.	Number of Reports of Domestic Abuse Incidents reported to NYP (York only) (**kpi-csp51-domestic-violence-reports.csv**)
+11.	Number of domestic violence incidents crimed (**kpi-domv3-incidents-crimed.csv**)
+12.	Households accepted as being homeless and in priority need - Domestic Violence (**kpi-hou281a-homeless-priority.csv**)
+13.	Residents who agree that York is a safe city to live in, relatively free from crime and violence - Agree (All Responses) (**kpi-bys131-perc-agree-safe.csv**)
+14.	All Crime per 1000 population (**kpi-csp01b-all-crime-1000-popn.csv**)
+15.	Overall Violence (Violence Against Person Def.) (**kpi-csp15-overall-violence.csv**)
+The majority of the datasets were recorded in a similar way, and for a similar time frame as the original data set (**kpi-domv9a-medium.csv**) but there are some exceptions.
+
+## Exploratory data analysis
+Using these datasets we wanted to examine trends in domestic violence in the City of York. 
+**Q1. What is the overall trend in reported domestic violence cases?**
 
