@@ -1,34 +1,130 @@
-# wai_hackathon_2021
-Women in AI Hackathon 2021: "Combat domestic violence with data and AI".
-Infos here: https://www.eventbrite.ca/e/waidatathon-2021-combat-domestic-violence-with-data-ai-tickets-139063638085
+# Report on WAI hackathon 2021
 
-**Instructions:**
+Team members (by alphabetical order, women first):
 
-In the WaiDatathon 2021, you will work in teams to analyze the datasets to answer problem statements of your choice relevant to the theme and present your findings on the final day of the event. Work together and focus on the big picture. Remember, the point of the WaiDatathon 2021 is to make our world a better place!
+- Prima Anugerahanti (Indonesia)
+- Heather Ritchie-Parker (Scotland)
+- Gerlien Verhaegen (Belgium)
+- Ettore Barbieri (Italy)
+- Arthur Bauville (France)
 
-## Tentative schedule
+# Introduction
 
-**Morning:**
-- Define our goals as a team for the competition (e.g., solving the world's problem, learning something, ...)
-- Have an overview look at the data together
-- define scientific questions (what do we try to predict? which specific problem(s) do we tackle?)
-- decide type of output (report, notebook, poster?, infographics, model)
-- decide methods (excell, matlab, python)
-- assign individual tasks
-- setup everybody's computer and decide on a workflow (e.g. github, etc...)
+For this competition, our team met on February 20, 2021. All team members are researchers at the Japan Institute for Marine-Earth Sciences and Technology (JAMSTEC). Since we could only spend one day together for the competition our objectives were: 
 
-**Afternoon:**
-- Get the job done. Either all together around a single computer or we split up the tasks or research questions into smaller groups.
+- to raise our own awareness about domestic abuse and gender inequality
+- to test our data analysis skills
+- to get familiar with this data problem, attempt to formulate questions and design strategies to tackle those questions.
 
-## Typical tasks for a data science project
-- Define background/objectives
-- Describe the data, look for missing values, etc...
-- clean the data (deal with missing values, types etc...)
-- data exploration, visualization, look for correlations, identify important parameters
-- data preprocessing (e.g. decorrelation, dimension reduction)
-- statistical modeling
-- predictive modeling?
-- Clean up and put the results together
+We tried to exploit two datasets: the Viz5/MakeOverMonday questionnaire on domestic abuse (later, "dataset 1"), and the dataset of reports of domestic violence to the city of York (later, "dataset 2"). 
+Since we alotted ourselves only one day of work, we focused on exploratory data analysis. We also attempted statistical modeling but faced a number of interesting road blocks for which we managed to design workarounds but we didn't have time to implement it.
 
+# Dataset 1
+
+## Description of the dataset
+
+Dataset 1 summarizes the results of a questionnaire where participants were asked whether they agree or disagree to the following statements:
+
+-A husband is justified in hitting or beating his wife if she burns the food
+-A husband is justified in hitting or beating his wife if she argues with him
+-A husband is justified in hitting or beating his wife if she goes out without telling him
+-A husband is justified in hitting or beating his wife if she neglects the children
+-A husband is justified in hitting or beating his wife if she refuses to have sex with him
+-A husband is justified in hitting or beating his wife for at least one specific reason
+
+The dataset includes the percentage of positive answers depending on categories of the following demographical features:
+– marital status, education level, employment status, residence type, or age
+
+## Exploratory data analysis
+
+Here, we tried to answer a few questions.
+**Question 1:** To which statement did people agree and disagreed the most for which it is justified to hit or beat the wife?
+**Answer:** Overall, the most agreed statement was: “for at least one specific reason”, the least agreed statement was: “if she burns food” (Fig. 1).
+
+
+**Question 2:** Were men or women most likely to agree that it was justified to hit or beat the wife?
+**Answer:** Women always significantly agreed more than men that it was justified to hit or beat a wife for any statement (Fig. 1)
+
+![Figure 1 boxplots per question and gender](./Figures/image1.png "Boxplots of percentage of YES answers per question and gender")
+**Fig. 1** Difference in value (i.e., the percentage of people agreeing that it was justified to hit or beat a wife) per statement (i.e., question) and per gender (F = female, M = male). Significant differences are illustrated by non-overlapping notches.
+
+
+**Code used to produce figure 1 in R:**
+```
+# to set your work directory to the folder containing the file:
+setwd("folder location") 
+
+#load your dataframe
+dat <- read.csv( "20200306 Data International Women's Day Viz5 Launch.csv")
+
+# check in dataframe did load properly
+head(dat) 
+
+#to get more info on the dataframe
+str(dat)
+
+#to upload package (install first if needed)
+library(ggplot2) 
+
+#build the boxplot
+ggplot(dat, aes(x = Question, y = Value))+
+geom_boxplot(aes(fill = Gender),notch=TRUE,las=2)+
+theme(axis.text.x = element_text(angle = 90))
+```
+
+**Question 3:** In which countries do people agree the most that "A husband is justified in hitting for at least one specific reason”?
+**Answer:** South America had the lowest values (i.e., disagreed the most) whereas countries in Africa and Asia the closest to the equator had the highest values (i.e., agreed the most). We were wondering why only countries in these regions took part in the survey.
+
+![Figure 2](./Figures/image2.png "Map of the distribution of positive answer to the statement 'A husband is justified in hitting for at least one specific reason'")
+**Fig. 2** World map showing the value (i.e., the percentage of people agreeing that it was justified to hit or beat a wife)for the statement “for at least one specific reason” for each country that took part in the survey. Countries in grey did not take part in the survey.
+
+**Code to produce figure 2 in R:** (for setting work directory and loading dataframe, see code above)
+```
+#load package
+library(rworldmap)
+
+#subsample the dataframe with only entries for the question “…for at least one specific reason”
+datq <- subset(dat,dat$Question=="... for at least one specific reason")
+
+#build map
+sPDF <- joinCountryData2Map(datq, joinCode='NAME', nameJoinColumn='Country')
+
+mapCountryData (sPDF, nameColumnToPlot='Value',missingCountryCol='darkgrey',mapTitle ="... for at least one specific reason")
+```
+
+**Question 4:** Are positive answers to the statement  "A husband is justified in hitting for at least one specific reason” correlated with the Gross Domestic Product (GDP)?
+**Answer:** There is a slight correlation (Kendall's rank correlation tau, tau = -0.104999, z = -15.676, p-value < 2.2e-16) with the percentage of people agreeing that it was justified to hit or beat a wife correlated and the GDP of these countries, with countries having the highest share of world GDP to disagree the most with all statements (Fig. 3).
+
+![Figure 3](./Figures/image3.png "Positive answer to the statement 'A husband is justified in hitting for at least one specific reason' as a function of GDP")
+
+**Fig. 3** Scatter plot of the value (i.e. Positive answer to the statement "A husband is justified in hitting for at least one specific reason”) versus the share of world GDP (in percentage) of the countries that participated in the survey.
+
+
+**Code for figure 3:**
+```
+# we first added an additional column in the dataframe with the share of World GDP we found online (https://www.worldometers.info/gdp/gdp-by-country/)
+# check if data is normally distributed to know which correlation test to use
+shapiro.test(dat$Value)
+
+#the data “Value” was not normally distributed, so we applied a non-parametric correlation test
+cor.test(dat$GDP, dat$Value, method="kendall")
+
+#built the plot
+library(ggplot2)
+
+plot(x=dat$GDP,y=dat$Value)
+ggplot(dat, aes(x=GDP, y=Value))+ 
+geom_point()+
+geom_smooth(method=lm)
+```
+
+
+## Modeling attempt
+
+A challenge for building a predictive model using this dataset is that the dataset does not include the answer and demographic features of each individual person who took the questionnaire (i.e. raw data). Instead, the data provided was agglomerated as percentage of "yes" for e.g. male or female; or the percentage of "yes" for people with "no", "primary", "secondary", or "higher" education level. We tried to use compound statistics to profile people who are most likely to answer "yes" to the given statement. In other terms we wanted to build a new dataset where one could ask: "if we pick at random a person that answered "yes", what is the probability that he is a highly educated man between 25-34 years old". To do this we tried to apply compound probability to combine the different statistics. The problem we faced is that the data we need was "how many percent of people answered yes", combined with "among the persons who answered yes, what is the percentage of people with low/medium/high education". However, to transform the available data to the data we wanted we would have needed at least the number of people from which the percentage was calculated (i.e. number of samples) for each "Demographics Question". In the absence of this data one could either get the raw data or attempt to approximately reconstruct this information from other datasets e.g. of demographics, education etc... Unfortunately we didn't have time to finish this analysis.
+
+
+
+# Summary
 
 
