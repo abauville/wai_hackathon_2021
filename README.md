@@ -162,7 +162,7 @@ To answer this we plotted the monthly reported cases of domestic violence from 2
 
 ![Figure 4](./Figures/reported_case.png)
 
-**Fig 4.** The number of reported domestic violence cases in the City of York, UK. A yearly average line is fitted in red.
+**Fig. 4** The number of reported domestic violence cases in the City of York, UK. A yearly average line is fitted in red.
 
 **Code used to produce figure 4 in python:**
 ```
@@ -181,7 +181,7 @@ To investigate this question we examined the data in two ways. Firstly, we plott
 
 ![Figure 5](./Figures/domestic_violence_case.png)
 
-**Fig 5.** Data on reported domestic violence cases in the City of York, UK. Top panel shows the monthly reported incidences from 2011-2016 for three risk categories; standard, medium and high. Bottom panel shows the summed values for each risk category by month. 
+**Fig. 5** Data on reported domestic violence cases in the City of York, UK. Top panel shows the monthly reported incidences from 2011-2016 for three risk categories; standard, medium and high. Bottom panel shows the summed values for each risk category by month. 
 
 **Code used to produce figure 5 in python:**
 ```
