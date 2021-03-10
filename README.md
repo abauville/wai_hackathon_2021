@@ -1,6 +1,6 @@
 # Domestic violence: risk factors and diagnostic using explainable AI
 
-## Introduction: domestic violence and its perception
+## 1. Introduction: domestic violence and its perception
 
 Text and figure: **Heather**
 key points:
@@ -10,7 +10,7 @@ key points:
 
 **Fig. 1.** Combines the  evolution of perception of the likelihood of being victim of a crime in the UK (decreasing trend in time), and the York reports (increasing trend in time)
 
-## Acceptability
+## 2. Acceptability
 
 Text and figure: **Gerlien**
 
@@ -18,7 +18,7 @@ Answers to the questions "Is it acceptable to beat you wife if..."
 
 **Fig. 2** Summary figure combining a map and relevant bar charts (or other types of charts) showing general trends
 
-## Does your view on acceptability influence your likelihood of experience domestic violence?
+## 3.Does your view on acceptability influence your likelihood of experience domestic violence?
 
 Data preprocessing: **Arthur*:
 Text and figure: **Ettore**
@@ -31,14 +31,14 @@ key points:
 - women who answered no to all the questionnaire questions are ~twice less likely to experience physical domestic violence.
 - no matter views on acceptability or level of education, the probability is always higher than 0. Therefore, we in the next sections we identify risk factors and we propose a diagnosis tool
 
-## Risk factors
+## 4. Risk factors
 data processing: **Prima and Arthur**
 plotting and text: **Prima**
 
 key points: 
 - we quantify how much knowledge of demographics, belief, wealth, wife and husband habit etc... control whether a woman is experiencing violence
 
-## Diagnosing risks domestic violence
+## 5. Diagnosing risks domestic violence
 **Arthur**
 
 key points: 
@@ -47,4 +47,4 @@ key points:
 - The output is a small decision tree, that can be implemented in software or printed on paper
 - At each step of the tree we can indicate whether the respondent is more likely or less likely to experience violence than the general population.
 
-## Conclusion
+## 6. Conclusion
