@@ -42,7 +42,7 @@ key points:
 ## 4. Risk factors
 data processing: **Prima and Arthur**
 plotting and text: **Prima**
-
+![alt text](./Figures/Female_demographic.png)
 key points: 
 - we quantify how much knowledge of demographics, belief, wealth, wife and husband habit etc... control whether a woman is experiencing violence
 
