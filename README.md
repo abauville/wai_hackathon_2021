@@ -14,7 +14,7 @@ key points:
 
 Text and figure: **Gerlien**
 
-![alt text for screen readers](“./Figures/Boxplot_acceptability_vs_experienced_vs_gender.png"Text to show on mouseover").
+![alt text](./Figures/Boxplot_acceptability_vs_experienced_vs_gender.png)
 
 Answers to the questions "Is it acceptable to beat you wife if..."
 
