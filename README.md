@@ -13,6 +13,7 @@ key points:
 ## 2. Acceptability vs. experienced domestic violence worldwide
 
 Text and figure: **Gerlien**
+
 **acceptability** = percentage of people agreeing it was justified to hit or beat a wife “for at least one specific reason” 
 **experienced** = the percentage of ever married women who have ever experienced physical or sexual violence committed by their husband or partner
 
