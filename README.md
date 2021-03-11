@@ -23,7 +23,8 @@ For all tested countries:
 
 ![alt text](./Figures/Acceptability_map.png)
 
-**yet to come experienced violence map** 
+
+![alt text](./Figures/Experienced_violence_map.png)
 
 ## 3.Does your view on acceptability influence your likelihood of experience domestic violence?
 
