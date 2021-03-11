@@ -10,7 +10,7 @@ key points:
 
 **Fig. 1.** Combines the  evolution of perception of the likelihood of being victim of a crime in the UK (decreasing trend in time), and the York reports (increasing trend in time)
 
-## 2. Acceptability vs. reality worldwide
+## 2. Acceptability vs. experienced domestic violence worldwide
 
 Text and figure: **Gerlien**
 
