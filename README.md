@@ -1,58 +1,29 @@
 # Domestic violence: risk factors and diagnostic using explainable AI
 
-## 1. Introduction: domestic violence and its perception
+This repository contains material related to our submission for the WaiDatathon 2021 in which we earned the first place.
+This datathon was organized by Women in AI on the theme ["Combat Domestic Violence with Data & AI"](https://www.womeninai.co/waidatathon-details). You can watch our 5-minute competition talk [here](https://lnkd.in/gBupkte).
 
-Text and figure: **Heather**
-key points:
+## Content
 
-- Our perception of domestic violence: is it acceptable? am I likely to be victim of it?
-- Reality of numbers
+This repository contains:
 
-**Fig. 1.** Combines the  evolution of perception of the likelihood of being victim of a crime in the UK (decreasing trend in time), and the York reports (increasing trend in time)
+- `Presentation_Wai_Finals.pdf`: slides of our presentation at the WaiDatathon event
+- `Presentation_MLT`: slides of presentation, invited by the community [Machine Learning Tokyo](https://github.com/Machine-Learning-Tokyo)
+- `report.ipynb`: a python3 jupyter notebook report that summarizes our findings and reproduces the results. The report contains in slightly different results than competition presentation for a few reasons:
 
-## 2. Acceptability vs. experienced domestic violence worldwide
+    - data copyright
+    - some competition figures were produced with R instead of python
+    - some competition figures layout was edited in a vector graphics software
+    - we added some figures or made existing ones interactive.
+- `./Data/`: 
+    - `ZZIR62FL.*`: the model dataset from the [DHS program](dhsprogram.com)
+    - `DHS_summary_world.csv` data generated using the DHS [STATcompiler](STATcompiler.com) tool.
+    - `iso_alpha_list.csv`: list ISO_ALPHA_3 standard country codes (for visualization).
 
-Text and figure: **Gerlien**
+## Team
 
-**acceptability** = percentage of people agreeing it was justified to hit or beat a wife “for at least one specific reason”
-**experienced** = the percentage of ever married women who have ever experienced physical or sexual violence committed by their husband or partner
-
-For all tested countries:
-
-![alt text](./Figures/Boxplot_acceptability_vs_experienced_vs_gender.png)
-
-![alt text](./Figures/Acceptability_map.png)
-
-
-![alt text](./Figures/Experienced_violence_map.png)
-
-## 3.Does your view on acceptability influence your likelihood of experience domestic violence?
-
-Data preprocessing: **Arthur*:
-Text and figure: **Ettore**
-
-**Fig. 3.** bar (or other) charts of acceptance vs experience of violence
-
-key points:
-
-- we use two questions from the DHS program full questionnaire: the previous question on the acceptability of violence and another one on actual experience of violence
-- women who answered no to all the questionnaire questions are ~twice less likely to experience physical domestic violence.
-- no matter views on acceptability or level of education, the probability is always higher than 0. Therefore, we in the next sections we identify risk factors and we propose a diagnosis tool
-
-## 4. Risk factors
-data processing: **Prima and Arthur**
-plotting and text: **Prima**
-![alt text](./Figures/Female_demographic1.png)
-key points: 
-- we quantify how much knowledge of demographics, belief, wealth, wife and husband habit etc... control whether a woman is experiencing violence
-
-## 5. Diagnosing risks domestic violence
-**Arthur**
-
-key points: 
-
-- We use a transparent AI technique (i.e. transparent in the sense of NOT a black box) to determine which question should one ask herself in order to identify red flags in her situation that may indicates that the relationship could evolve towards violence
-- The output is a small decision tree, that can be implemented in software or printed on paper
-- At each step of the tree we can indicate whether the respondent is more likely or less likely to experience violence than the general population.
-
-## 6. Conclusion
+- [Arthur Bauville (leader)](https://www.linkedin.com/in/arthur-bauville-a734871ba/)
+- [Gerlien Verhaegen](https://www.linkedin.com/in/gerlien-verhaegen-695b4868/)
+- [Prima Anugerahanti](https://www.linkedin.com/in/prima-anugerahanti-248b17a1/)
+- [Heather Ritchie-Parker](https://www.linkedin.com/in/heather-ritchie-b3483476/)
+- [Ettore Barbieri](https://www.linkedin.com/in/ettorebarbieri/)
