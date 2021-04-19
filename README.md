@@ -1,4 +1,4 @@
-# Winner submission to Wai datathon 2021
+# Winning submission to Wai datathon 2021
 
 ![cover slide](./Figures/Cover_slide.png)
 
